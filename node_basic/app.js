@@ -4,7 +4,7 @@
 //
 //
 // const server = http.createServer((req,res) => {
-//     res.end("hello Liner Babynp");
+//     res.end("hello Liner Baby");
 // })
 //
 // server.listen(3000);
@@ -31,9 +31,11 @@
 //     if (err) {
 //         console.log(err)
 //     }
+// execute last
 //     console.log(data.toString())
 // })
 //
+//execute first
 // console.log("Node js async Example 3")
 
 //EXAMPLE 4
