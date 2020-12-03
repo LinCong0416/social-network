@@ -1,8 +1,10 @@
 const express = require("express")
 const app = express()
 const mongoose = require('mongoose')
-const morgan = require("morgan");
+const morgan = require("morgan")
 const dotenv = require('dotenv')
+const bodyParser = require('body-parser')
+const expressValidator = require('express-validator');
 dotenv.config()
 
 //db
@@ -18,11 +20,10 @@ mongoose
 mongoose.connection.on("error", err =>{
     console.log('DB connection error: ${err.message}');
 })
-//bring in routes
-const getPosts = require("./routes/post")
+
 
 //middleware
-app.use(morgan("dev"));
+
 
 // const myMiddleware = (req, res, next) => {
 //     console.log('middleware applied!');
@@ -30,8 +31,15 @@ app.use(morgan("dev"));
 // }
 
 // app.use(myMiddleware);
+app.use(expressValidator());
+app.use(morgan("dev"));
+app.use(bodyParser.json());
 
+
+//bring in routes
+const getPosts = require("./routes/post")
 app.use("/", getPosts);
 
+
 const  port = process.env.PORT || npm8080;
-app.listen(port, () => {console.log('Node JS API is listening on 8080')});
+app.listen(port, () => {console.log('Node JS API is listening on: ${port}')});
