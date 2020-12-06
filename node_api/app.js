@@ -4,8 +4,11 @@ const mongoose = require('mongoose')
 const morgan = require("morgan")
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 const expressValidator = require('express-validator');
 dotenv.config()
+const postRoutes = require("./routes/post")
+const authRoutes = require("./routes/auth")
 
 //db
 //liner.416@gmail.com
@@ -34,11 +37,9 @@ mongoose.connection.on("error", err =>{
 app.use(expressValidator());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
-
-
-//bring in routes
-const getPosts = require("./routes/post")
-app.use("/", getPosts);
+app.use(cookieParser());
+app.use("/", postRoutes);
+app.use("/", authRoutes);
 
 
 const  port = process.env.PORT || npm8080;
