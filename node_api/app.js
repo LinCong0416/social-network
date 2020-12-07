@@ -9,6 +9,7 @@ const expressValidator = require('express-validator');
 dotenv.config()
 const postRoutes = require("./routes/post")
 const authRoutes = require("./routes/auth")
+const userRoutes = require("./routes/user")
 
 //db
 //liner.416@gmail.com
@@ -40,6 +41,12 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use("/", postRoutes);
 app.use("/", authRoutes);
+app.use("/",userRoutes);
+app.use(function (err, req, res, next) {
+    if (err.name === 'UnauthorizedError') {
+        res.status(401).json({error: "Unauthorized!"});
+    }
+});
 
 
 const  port = process.env.PORT || npm8080;
