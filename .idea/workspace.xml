@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6744a0a-6e88-40ff-bdc6-be34231d1ded" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/node_api/docs/apiDocs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_api/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_api/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_api/controllers/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_api/controllers/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_api/routes/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_api/routes/post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +87,7 @@
       <workItem from="1606950052469" duration="6653000" />
       <workItem from="1606957918445" duration="2728000" />
       <workItem from="1607211827927" duration="7672000" />
-      <workItem from="1607294497406" duration="14924000" />
+      <workItem from="1607294497406" duration="15126000" />
     </task>
     <servers />
   </component>
