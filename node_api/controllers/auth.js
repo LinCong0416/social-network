@@ -17,11 +17,11 @@ exports.signup = async (req,res) => {
 exports.signin = (req, res) => {
     // find the user base on email
     const {_id, name, email, password} = req.body
-    User.findOne({email}, (err, user) => {
+    User.findOne({email}, (error, user) => {
         //if err or no user
-        if (err || !user) {
+        if (error || !user) {
             return res.status(401).json({
-                err: "User with that email does not exist, plean signin."
+                error: "User with that email does not exist, plean signin."
             })
         }
         // if user is found make sure the email and password are matched

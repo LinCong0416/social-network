@@ -37,7 +37,7 @@ mongoose
     .then(() => console.log('DB connected'))
 
 mongoose.connection.on("error", err =>{
-    console.log('DB connection error: ${err.message}');
+    console.log(`DB connection error: ${err.message}`);
 })
 
 
@@ -66,4 +66,4 @@ app.use(function (err, req, res, next) {
 
 
 const  port = process.env.PORT || npm8080;
-app.listen(port, () => {console.log('Node JS API is listening on: ${port}')});
+app.listen(port, () => {console.log(`Node JS API is listening on: ${port}`)});
